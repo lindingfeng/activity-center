@@ -1,0 +1,66 @@
+.base-login-component {
+  height: 95%;
+  overflow: hidden;
+  .base-login-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    .login-header {
+      position: relative;
+      padding: 40px 0;
+      text-align: center;
+      .icon-logo {
+        width: 80px;
+        height: 80px;
+      }
+      .icon-close {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        width: 25px;
+        height: 25px;
+      }
+    }
+    .login-body {
+      flex: 1;
+      padding: 0 40px;
+      overflow-y: auto;
+      .login-field {
+        position: relative;
+        display: flex;
+        align-items: center;
+        &::after {
+          position: absolute;
+          content: '';
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #eff2f3;
+        }
+        .custom-field {
+          flex: 1;
+          padding: 12px 0;
+        }
+        .countdown-content {
+          font-size: 14px;
+          .countdown-count, &.countdown .code-button {
+            color: #c9ced1;
+          }
+        }
+      }
+      .send-code-content {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        color: #222222;
+      }
+      .login-button {
+        padding: 20px 0 50px;
+      }
+    }
+  }
+}

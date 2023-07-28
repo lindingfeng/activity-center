@@ -1,0 +1,66 @@
+{
+  "name": "hsb-web-activity",
+  "version": "1.0.0",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "webpack",
+        "postcss"
+      ]
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:report": "cross-env REPORT_ANALYZER=true NO_CDN_PATH=true vite build",
+    "build:preview": "cross-env NO_CDN_PATH=true pnpm build && pnpm preview",
+    "preview": "serve -c serve.json",
+    "deploy": "hsb-deploy-move init -k KqDqRdei"
+  },
+  "dependencies": {
+    "@hsb/aes-256-gcm": "git+http://gitlab.huishoubao.com/web_team/ziyou/aes-256-gcm.git#v1.0.3",
+    "@hsb/business-component": "git+http://gitlab.huishoubao.com/web_team/ziyou/hsb-recycle-business.git#1.0.0-beta.3",
+    "@vueuse/core": "^10.2.1",
+    "axios": "^1.2.1",
+    "dayjs": "^1.11.9",
+    "lodash-es": "^4.17.21",
+    "only": "^0.0.2",
+    "pinia": "^2.1.4",
+    "query-string": "^8.1.0",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "sha1": "^1.1.1",
+    "vant": "^2.12.53",
+    "vue": "^2.7.14",
+    "vue-lazyload": "^1.3.5",
+    "vue-router": "^3.6.5",
+    "vue-wechat-title": "^2.0.7"
+  },
+  "devDependencies": {
+    "@hsb/deploy-move": "git+http://gitlab.huishoubao.com/web_team/ziyou/hsb-devops-move.git#v1.2.5",
+    "@rollup/plugin-eslint": "^9.0.1",
+    "@rushstack/eslint-patch": "^1.1.0",
+    "@vitejs/plugin-legacy": "^4.0.2",
+    "@vitejs/plugin-vue2": "^1.1.2",
+    "@vitejs/plugin-vue2-jsx": "^1.1.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "autoprefixer": "^10.4.13",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.5.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "less": "^4.1.3",
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "^2.5.1",
+    "rollup-plugin-visualizer": "^5.8.3",
+    "sass": "^1.64.1",
+    "unplugin-vue-components": "^0.25.1",
+    "unplugin-vue-define-options": "^1.3.3",
+    "vconsole": "^3.15.0",
+    "vite": "^4.4.5",
+    "vite-plugin-babel-import": "^2.0.5",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "browserslist": [
+    "chrome >= 37",
+    "iOS >= 12"
+  ]
+}

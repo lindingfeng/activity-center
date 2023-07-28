@@ -1,0 +1,10 @@
+{
+  "public": "dist/",
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/hsbActivity/css/:file", "destination": "css/:file" },
+    { "source": "/hsbActivity/img/:file", "destination": "img/:file" },
+    { "source": "/hsbActivity/js/:file", "destination": "js/:file" },
+    { "source": "/hsbActivity/**", "destination": "index.html" }
+  ]
+}
